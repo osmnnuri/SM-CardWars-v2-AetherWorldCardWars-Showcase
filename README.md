@@ -36,7 +36,7 @@ oyun Flutter ile sıfırdan yeniden yazıldı ve kapsamı büyük ölçüde geni
 | Platform | Yalnızca Android | Android, iOS, Web (PWA), Windows, macOS, Linux |
 | Deste | 3 kart | 8 kartlık deste, elde sürekli 4 kart (dönüşümlü) |
 | Kartlar | 3 çeşit (saldırı, savunma, sersemletme) | Beceri, büyü, pasif kartlar; D'den EX/LG'ye kadar rank sistemi |
-| Rakip | Python ile yazılmış yapay zekâ | Oyun motoruna gömülü Dart yapay zekâ |
+| Rakip | Kotlin oyun motorunda olasılıklı yapay zekâ | Hamleleri puanlayan, oyun motoruna gömülü Dart yapay zekâ |
 | Çok oyunculu | Yok | Oda koduyla çevrimiçi karşılaşma |
 | İlerleme | Yok | Hikâye bölümleri (chapter), hesap, ödüller |
 | Ekonomi | Yok | Mağaza, sandıklar, envanter |
