@@ -2,7 +2,7 @@
 
 <p align="center">
   Desteni kur, ekipmanını kuşan, yapay zekâya ya da arkadaşına karşı savaş.<br>
-  Flutter ile baştan yazılan yeni sürüm · v2.0 ve sonrası
+  Flutter ile baştan yazılan yeni sürüm · v2.1 ve sonrası
 </p>
 
 <p align="center">
@@ -11,7 +11,7 @@
 
 ---
 
-> Oyunun eski adı **SM CardWars (Strategy Master Card Wars)** idi. v2.0 ile
+> Oyunun eski adı **SM CardWars (Strategy Master Card Wars)** idi. v2.1 ile
 > birlikte adı **Aether World Card Wars** olarak değiştirildi.
 
 ## Oyun konsepti
@@ -28,9 +28,9 @@ hangi karta harcayacağına karar vermek gerekir.
 İlk sürüm (v1.0) Kotlin ile yazılmış, üç kartlık basit bir demoydu. v2.0'da
 oyun Flutter ile sıfırdan yeniden yazıldı ve kapsamı büyük ölçüde genişledi.
 
-## v1.0 → v2.0: neler değişti?
+## v1.0 → v2.1: neler değişti?
 
-| | v1.0 (Kotlin) | v2.0 (Flutter) |
+| | v1.0 (Kotlin) | v2.1 (Flutter) |
 |---|---|---|
 | Ad | SM CardWars | Aether World Card Wars |
 | Platform | Yalnızca Android | Android, iOS, Web (PWA), Windows, macOS, Linux |
