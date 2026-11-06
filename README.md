@@ -2,7 +2,7 @@
 
 <p align="center">
   Desteni kur, ekipmanını kuşan, yapay zekâya ya da arkadaşına karşı savaş.<br>
-  Flutter ile baştan yazılan yeni sürüm · v2.0
+  Flutter ile baştan yazılan yeni sürüm · v2.0 ve sonrası
 </p>
 
 <p align="center">
@@ -37,9 +37,10 @@ oyun Flutter ile sıfırdan yeniden yazıldı ve kapsamı büyük ölçüde geni
 | Deste | 3 kart | 8 kartlık deste, elde sürekli 4 kart (dönüşümlü) |
 | Kartlar | 3 çeşit (saldırı, savunma, sersemletme) | Beceri, büyü, pasif kartlar; D'den EX/LG'ye kadar rank sistemi |
 | Rakip | Kotlin oyun motorunda olasılıklı yapay zekâ | Hamleleri puanlayan, oyun motoruna gömülü Dart yapay zekâ |
-| Çok oyunculu | Yok | Oda koduyla çevrimiçi karşılaşma |
-| İlerleme | Yok | Hikâye bölümleri (chapter), hesap, ödüller |
-| Ekonomi | Yok | Mağaza, sandıklar, envanter |
+| Çok oyunculu | Yok | Dereceli oyun, oda koduyla çevrimiçi karşılaşma, arkadaş sistemi |
+| İlerleme | Yok | 100 bölümlük hikâye modu, dallanan yan hikâyeler, yetenekler, hesap |
+| Ekonomi | Yok | Mağaza, Günün Fırsatı, sandıklar, Mana Taşı, efsun, envanter |
+| Dil | Türkçe | Türkçe, İngilizce, Çince |
 | Yönetim | Yok | Ayrı yönetim paneli |
 
 ## Öne çıkan özellikler
@@ -47,19 +48,34 @@ oyun Flutter ile sıfırdan yeniden yazıldı ve kapsamı büyük ölçüde geni
 - **Deste kurma ve kart sistemi:** Beceri, büyü ve pasif kartlar; MP maliyeti,
   şarj süresi, geri tepme ve savunma gibi mekanikler. Bazı kartlar yalnızca
   belirli ekipman, soy veya yetenekle desteye eklenebiliyor.
-- **Ekipman:** Kask, göğüslük, bacaklık, bot ve el slotları. Eşyalar can,
-  savunma, güç gibi değerler ve yeni kartların kilidini açan özellikler veriyor.
-  Silahlara bağlı "salınım formları" ile savaş sırasında güç kazanılabiliyor.
-- **Hikâye modu:** Bölüm bölüm ilerleyen, yeni kart ve eşyaların açıldığı
-  bir anlatı.
+- **Ekipman ve efsun:** Kask, göğüslük, bacaklık, bot, el ve kolye slotları.
+  Eşyalar can, savunma, güç gibi değerler, set etkileri ve yeni kartların
+  kilidini açan özellikler veriyor. Eşyalar Mana Taşı ile efsunlanabiliyor;
+  başarı şansı sunucuda, güce ve Demircilik seviyesine göre hesaplanıyor.
+- **Hikâye modu:** Baştan sona bir senaryoyu izleyen 100 bölüm; 56'sı savaş,
+  kalanı okunan anlatı. Her bölümün ne kazandırdığı "Kazanımlar" listesinde
+  görünüyor.
+- **Yan hikâyeler:** Ana hikâyeden ayrı ilerleyen, seçimlere göre dallanan ve
+  her biri üç farklı sonla biten görevler.
 - **Yapay zekâ rakip:** Her turda olası hamleleri puanlayıp en iyisini seçen,
   gerektiğinde güçlü bir kart için MP biriktiren bir rakip.
-- **Çevrimiçi mod:** Oda oluştur, kodu arkadaşınla paylaş, karşılıklı savaş.
-- **Mağaza, sandık ve envanter:** Ödüllerle kart ve eşya toplama.
-- **Ses ve ayarlar:** Ses efektleri ve kişiselleştirilebilir ayarlar.
-- **Yönetim paneli:** Kart düzenleyici, denge ayarları, oyuncu yönetimi,
-  ödül kodları ve görünüm ayarları; içerik uygulamayı güncellemeden
-  sunucudan değiştirilebiliyor.
+- **Çevrimiçi ve sosyal:** Dereceli oyun (normal eşleşme, hızlı eşleşme,
+  meydan okuma), oda koduyla karşılıklı savaş, arkadaş arama ve savaş içi
+  emojiler.
+- **Günlük oyun döngüsü:** Seri ödüllü günlük giriş, şans çarkı, her gün
+  değişen Günün Fırsatı ve günlük puan sınırı olan antrenman mini oyunları.
+  Mini oyunlar yetenek seviyelerini (Demircilik, silah ustalıkları vb.)
+  yükseltiyor.
+- **Mağaza, sandık ve envanter:** Seviyeye göre fiyatlanan ekipman, her
+  seviyeye özel 3D sandık animasyonları, rütbeye göre değişen kart tasarımları.
+- **Arayüz ve ses:** Mor, kırmızı ve siyah tonlarında katmanlı arayüz; gerçek
+  kayıtlı (CC0) savaş sesleri ve retro müzik listesi.
+- **Çoklu dil:** Türkçe, İngilizce ve Çince arayüz.
+- **Hesap:** Kullanım koşulları, gizlilik ve KVKK metinleri; uygulama içinden
+  hesap silme.
+- **Yönetim paneli:** Etki kurucusuyla kart düzenleme, denge ölçümü, oyuncu
+  yönetimi, bildirimler, etkinlikler, raporlar, güncelleme notları ve geri
+  alma; içerik uygulamayı güncellemeden sunucudan değiştirilebiliyor.
 
 ## Neden Kotlin'den Flutter'a geçtim?
 
@@ -79,12 +95,13 @@ oyun Flutter ile sıfırdan yeniden yazıldı ve kapsamı büyük ölçüde geni
 | Katman | Teknoloji |
 |---|---|
 | Uygulama | Flutter, Dart |
+| Çoklu dil | Kendi `t()` çeviri katmanı (tr / en / zh) |
 | Yerel veri | shared_preferences |
 | Ses | audioplayers |
 | Ağ | http |
 | Sunucu | Node.js (serverless API), Zod ile doğrulama |
 | Veritabanı | Firebase (firebase-admin) |
-| Barındırma | Firebase Hosting (web / PWA), Vercel (API) |
+| Barındırma | Firebase Hosting (web / PWA), Vercel (API), Netlify (API vekil sunucusu) |
 | Test | flutter_test, node:test |
 
 ## Tasarım ve görseller
@@ -94,11 +111,13 @@ ait. Kodlama sürecinde yapay zekâ destekli araçlardan yararlandım.
 
 ## Durum ve yol haritası
 
-v2.0 yayında.
+Oyun yayında ve düzenli güncelleniyor; her güncellemenin notları oyun
+içinde gösteriliyor.
 
-- Yeni kartlar, eşyalar ve hikâye bölümleri eklenmeye devam edecek.
-- Çevrimiçi mod için eşleştirme ve sıralama sistemi planlanıyor.
-- Mağaza sürümleri (Google Play / App Store) değerlendiriliyor.
+- Hikâyenin ikinci bölümü (yeni senaryo, yeni karakter ve kartlar) hazırlanıyor.
+- Tanrıların Arenası adlı sınırlı süreli etkinlik modu geliyor.
+- Hikâye metninin İngilizce ve Çince çevirisi yapılacak.
+- Mağaza sürümleri (Google Play / App Store) için hazırlık sürüyor.
 
 ## Kaynak kod
 
